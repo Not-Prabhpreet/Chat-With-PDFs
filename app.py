@@ -11,6 +11,8 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
 from htmlTemplates import css, bot_template, user_template
 
+# Set page configuration at the beginning
+st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
 
 def get_pdf_text(pdf_docs):
     text = ""
@@ -64,7 +66,6 @@ def main():
     load_dotenv()  # Ensure the environment variable is loaded before using it
     genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
-    st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
     st.header("Chat with multiple PDFs :books:")
     user_question = st.text_input("Ask a question about your documents:")
 
@@ -133,7 +134,4 @@ user_template = '''
 </div>
 '''
 
-
-if __name__ == '__main__':
-    main()
 
