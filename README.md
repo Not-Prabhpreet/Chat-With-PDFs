@@ -57,6 +57,5 @@ To run this project locally, follow these steps:
 </pre>
 
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+
 
